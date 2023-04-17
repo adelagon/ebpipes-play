@@ -1,0 +1,24 @@
+Name: ebpipes_workflow
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - main
+
+# Required - Define action configurations.
+Actions:
+  cdk-deploy:
+    Identifier: aws/cdk-deploy@v1.0.3
+    Configuration:
+      Region: ap-southeast-1
+      StackName: EBPipesPlay
+    Environment:
+      Connections:
+        - Role: CodeCatalystPreviewDevelopmentAdministrator-y4kwwj
+          Name: adelagon-isengard
+      Name: development
+    Inputs:
+      Sources:
+        - WorkflowSource
