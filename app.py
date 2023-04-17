@@ -7,7 +7,7 @@ from ebpipes_play.ebpipes_play_stack import EbpipesPlayStack
 
 
 app = cdk.App()
-EbpipesPlayStack(app, "EbpipesPlayStack",
+EbpipesPlayStack(app, "EbpipesPlay",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
