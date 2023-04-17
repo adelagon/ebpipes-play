@@ -59,7 +59,7 @@ class EbpipesPlayStack(Stack):
             source=queue.queue_arn,
             source_parameters=pipes.CfnPipe.PipeSourceParametersProperty(
                 sqs_queue_parameters=pipes.CfnPipe.PipeSourceSqsQueueParametersProperty(
-                    batch_size=5,
+                    batch_size=1,
                     maximum_batching_window_in_seconds=60
                 )
             ),
